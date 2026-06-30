@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aysén Vivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Aysén Vivo</h1>
+    <p>Plataforma de Experiencias Turísticas Sostenibles - Región de Aysén</p>
+  </header>
+
+  <nav>
+    <button class="filtro activo" data-categoria="Todos">Todos</button>
+    <button class="filtro" data-categoria="Navegación">Navegación</button>
+    <button class="filtro" data-categoria="Trekking">Trekking</button>
+    <button class="filtro" data-categoria="Pesca">Pesca</button>
+    <button class="filtro" data-categoria="Cultura">Cultura</button>
+  </nav>
+
+  <main>
+    <section id="experiencias" class="contenedor-tarjetas">
+      <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+    </section>
+
+    <section id="reserva">
+      <h2>Reserva tu experiencia</h2>
+      <form id="formReserva">
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre">
+        <span class="error" id="errorNombre"></span>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <span class="error" id="errorEmail"></span>
+
+        <label for="experiencia">Experiencia</label>
+        <select id="experiencia" name="experiencia">
+          <option value="">Selecciona una experiencia</option>
+        </select>
+        <span class="error" id="errorExperiencia"></span>
+
+        <label for="personas">Número de personas</label>
+        <input type="number" id="personas" name="personas" min="1">
+        <span class="error" id="errorPersonas"></span>
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha">
+        <span class="error" id="errorFecha"></span>
+
+        <button type="submit">Reservar</button>
+        <p id="mensajeExito" class="exito"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aysén Vivo - Turismo sostenible en la Patagonia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
